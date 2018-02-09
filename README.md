@@ -1,7 +1,7 @@
 ## Dockerfile for Concourse pipelines
 
 
-This repository contains **Dockerfile** of JDK8 official release, Maven 3.5.2, and a settings file for Spring Milestone repositories.
+This repository contains **Dockerfile** of JDK8 official release, Maven 3.5.2, and a settings file for Spring Milestone repositories. The image built from this repository is aimed to be used in Concourse pipelines.
 
 ### Base Docker Image
 
@@ -37,3 +37,8 @@ For example, you can run a `Oracle Java 8 with Maven 3.5.2` container with the f
 #### Run `mvn`
 
     docker run -it --rm dmrlvnt/jdk8-maven3.5.2:latest mvn --version
+
+#### Run `mvn` to get a dependency from Spring Milestone repositories
+
+    docker run -it --rm dmrlvnt/jdk8-maven3.5.2:latest mvn dependency:get -Dartifact=org.springframework.boot:spring-boot-starter-test:LATEST:jar
+
