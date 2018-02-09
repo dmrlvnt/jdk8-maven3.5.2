@@ -16,11 +16,8 @@ This repository contains **Dockerfile** of JDK8 official release, Maven 3.5.2, a
 
 For example, you can run a `Oracle Java 8 with Maven 3.5.2` container with the following command:
 
-    docker run -it --rm dmrlvnt/jdk8-maven3.5.2:latest -version
+    docker run -it --rm dmrlvnt/jdk8-maven3.5.2:latest
 
-    or
-
-    docker run -it --rm dmrlvnt/jdk8-maven3.5.2:latest mvn --version
 
 ### Installation
 
@@ -31,12 +28,12 @@ For example, you can run a `Oracle Java 8 with Maven 3.5.2` container with the f
 
 ### Usage
 
-    docker run -it --rm dockerfile/java
+    docker run -it --rm dmrlvnt/jdk8-maven3.5.2:latest
 
 #### Run `javac`
 
-    docker run -it --rm dockerfile/java javac
+    docker run -it --rm dmrlvnt/jdk8-maven3.5.2:latest javac -version
 
 #### Run `mvn`
 
-    docker run -it --rm dockerfile/java mvn
+    docker run -it --rm dmrlvnt/jdk8-maven3.5.2:latest mvn --version
